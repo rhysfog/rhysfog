@@ -1,0 +1,29 @@
+body::before, .wrapper {
+  background-image: url('OSA8adj.jpg');
+}
+
+.navItem {
+  color: white;
+}
+.navHighlight {
+  background: white;
+  color: black;
+}
+
+.subHeading h2 {
+  font-size: 1.8em;
+}
+.subHeading li {
+  font-size: 1.5em;
+  line-height: 1.8em;
+}
+
+.pageTitles {
+  grid-template-rows: 10fr 1fr 10fr;
+}
+.pageTitles, .subHeading {
+  background-color: rgba(0,0,0,0.4);
+}
+.pageTitles h2 {
+  letter-spacing: 0;
+}

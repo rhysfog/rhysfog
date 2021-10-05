@@ -1,0 +1,21 @@
+body::before, .wrapper {
+  background-image: url('Omap2adj.jpg');
+}
+
+.navItem {
+  color: black;
+}
+.navHighlight {
+  background: black;
+  color: white;
+}
+
+.pageTitles {
+  grid-template-rows: 10fr 1fr 10fr;
+}
+.pageTitles, .subHeading {
+  background-color: rgba(0,0,0,0.6);
+}
+.pageTitles h2 {
+  letter-spacing: 0;
+}
