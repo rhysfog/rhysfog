@@ -4,7 +4,7 @@
     'navBar'
     'mainTitle'
     'imageBox'
-    'quickLinks';
+    'footerLinks';
   grid-template-columns: 100%;
   grid-template-rows: 5em clamp(5rem, 2.7500rem + 10.0000vw, 8rem) 1fr 5em;;
   height: 100vh;

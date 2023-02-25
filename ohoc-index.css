@@ -4,6 +4,7 @@ body {
   animation-fill-mode: forwards;
   background-color: black;
   box-sizing: border-box;
+  color: white;
   display: flex;
   justify-content: center;
   font-family: 'Calibri', 'Lato', sans-serif;
@@ -20,6 +21,8 @@ body {
   }
 }
 
+/* Use a breakpoint at 950 screen width; switch from header buttons to menu, text/images side-by-side to interspersed. */
+
 .wrapper {
   display: grid;
   grid-template-areas:
@@ -27,9 +30,9 @@ body {
     'mainTitle'
     'imageBox'
     'textBox'
-    'quickLinks';
+    'footerLinks';
   grid-template-columns: 100%;
-  grid-template-rows: 5em clamp(5rem, 2.7500rem + 10.0000vw, 8rem) 1fr 5em 5em;;
+  grid-template-rows: 5em clamp(5rem, 2.7500rem + 10.0000vw, 8rem) 20rem auto 8em;
   height: 100vh;
   width: 100%;
 }
@@ -46,6 +49,20 @@ body {
   height: 100%;
   justify-content: center;
   opacity: 0;
+}
+
+.headerLinks {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+.headerLinks .button {
+  align-items: center;
+  display: flex;
+  font-size: clamp(0.9rem, 0.4000rem + 0.8000vw, 1.1rem);
+  height: 35px;
+  justify-content: center;
+  width: clamp(4rem, -3.5000rem + 12.0000vw, 7rem);
 }
 
 .headerNav {
@@ -127,51 +144,73 @@ header, .mainTitle {
 }
 
 .textBox {
+  align-items: center;
   animation: fadeIn ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   background: #008A00;
-
   display: grid;
-  align-items: center;
-  justify-items: center;
   grid-area: textBox;
+  grid-row-gap: 20px;
+  grid-template-columns: 100%;
+  justify-items: center;
   opacity: 0;
-  overflow: hidden;
-  padding-left: 15%;
-  padding-right: 15%;
-  text-align: center;
+  /* clamp from 1050 to 500px: 15rem to 5rem */
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
-.textBox h2, li {
+.textBox h2 {
   color: white;
-  font-size: clamp(1rem, 0.2500rem + 3.3333vw, 1.5rem);
+  font-size: clamp(1rem, 0.2500rem + 3.3333vw, 2rem);
   font-weight: bold;
   margin-top: 5px;
   margin-bottom: 5px;
+  text-align: center;
 }
-.textBox h2 {
-  font-weight: normal;
+.textBox p {
+  /* clamp from 1400 to 900px: 1.5 to 1rem */
+  font-size: clamp(1rem, 0.1000rem + 1.6000vw, 1.5rem);
+  text-align: left;
 }
 
-.quickLinks {
+.textSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* breakpoint at 1050px: switch text images to block and float center,no margin  */
+.textImage {
+  align-self: center;
+  justify-self: center;
+  margin: 10px;
+  /* clamp from 1400 to 900px: 22 to 18rem */
+  width: clamp(18rem, 0.0000rem + 32.0000vw, 28rem);
+}
+
+/* Footer */
+.footerLinks, .headerLinks {
   animation: fadeIn ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   background: #004D00;
   display: grid;
-  grid-area: quickLinks;
+  grid-area: footerLinks;
   grid-column-gap: 30px;
   grid-template-columns: 1fr 1fr;
   place-items: center;
   text-align: center;
 }
 
-.quickLinks a {
+.footerLinks a, .headerLinks a {
   color: white;
   text-decoration: none;
   text-shadow: black 1px 1px;
   font-size: clamp(0.8rem, 0.1250rem + 3.0000vw, 1.7rem);
 }
+.footerLinks a {
+  font-size: clamp(0.8rem, 0.1250rem + 3.0000vw, 1.7rem);
+}
+
 .button {
    border-top: 2px solid #fdd336;
    border-right: 2px solid #fdd336;
@@ -183,8 +222,11 @@ header, .mainTitle {
    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
    box-shadow: rgba(0,0,0,1) 0 1px 0;
-   width: clamp(7rem, 1.0000rem + 26.6667vw, 15rem);
- }
+}
+.footerLinks .button {
+  width: clamp(7rem, 1.0000rem + 26.6667vw, 15rem);
+}
+
 .button:hover {
   border-top-color: #ca9b05;
   background: #fdd336;
@@ -193,9 +235,9 @@ header, .mainTitle {
   border-top-color: #ca9b05;
   background: #fdd336;
 }
-.upcomingEvents {
+.firstButton {
   justify-self: end;
 }
-.joinClub {
+.secondButton {
   justify-self: start;
 }
