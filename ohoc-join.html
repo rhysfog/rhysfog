@@ -16,6 +16,41 @@
       <header>
         <div class='navBar'>
           <img class='logo' src='Logo4noBGWhite.png' alt='OHOC logo'>
+          <div class='headerLinks'>
+            <!--    Made by Erik Terwan    -->
+            <!--   24th of November 2015   -->
+            <!--        MIT License        -->
+            <nav role="navigation">
+              <div id="menuToggle">
+                <!--
+                A fake / hidden checkbox is used as click reciever,
+                so you can use the :checked selector on it.
+                -->
+                <input type="checkbox" />
+
+                <!--
+                Some spans to act as a hamburger.
+
+                They are acting like a real hamburger,
+                not that McDonalds stuff.
+                -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <!--
+                Too bad the menu has to be inside of the button
+                but hey, it's pure CSS magic.
+                -->
+                <ul id="menu">
+                  <a href="index.html"><li>Home</li></a>
+                  <a href='ohoc-join.html'><li>Join</li></a>
+                  <a href='https://www.sa.orienteering.asn.au/events/event-calendar' target='blank'><li>Events</li></a>
+                  <a href='https://www.sa.orienteering.asn.au/about-us/news/sa-orienteer' target='blank'><li>OSA Newsletter</li></a>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
       </header>
 
@@ -25,24 +60,25 @@
         <h2>ORIENTEERING CLUB</h2>
       </div>
 
-      <div class='midSection'>
-        <div class='textBox'>
-          <div class='expandButton'>
-            <i class="fa fa-chevron-circle-up expand" style='font-size: 1.5em'></i>
-            <i class="fa fa-chevron-circle-down collapse" style='font-size: 1.5em'></i>
-          </div>
-          <h1>BENEFITS OF MEMBERSHIP</h1>
-          <div class='expandableText'>
-            <h2>OHOC welcomes newcomers of all ages and abilities. Our members range in experience from beginners to elite orienteers who have competed for Australia at World Championships. Benefits of club membership include:</h2>
+      <div class='imageBox'>
+        <img src='RelayStart2.jpg' alt='Relay Start'>
+      </div>
+
+      <div class='textBox'>
+        <div class='textSection'>
+          <div class='textBlock'>
+            <h2>BENEFITS OF MEMBERSHIP</h2>
+            <p>OHOC welcomes newcomers of all ages and abilities. Our members range in experience from beginners to elite orienteers who have competed for Australia at World Championships. Benefits of club membership include:</p>
             <ul>
               <li>reduced entry fees to Orienteering SA events</li>
               <li>navigation and fitness training</li>
               <li>the club's social events throughout the year</li>
             </ul>
-            <h2>View the <a href="MembershipForm2023NewMembers.doc">membership application form</a> for details.</h2>
+            <p>View the <a href="MembershipForm2023NewMembers.doc">membership application form</a> for details.</p>
           </div>
         </div>
       </div>
+
 
       <div class='footerLinks'>
         <a class='link firstButton' href='index.html'>
