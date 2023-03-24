@@ -32,12 +32,13 @@ body {
     'textBox'
     'footerLinks';
   grid-template-columns: 100%;
-  grid-template-rows: 5em clamp(5rem, 2.7500rem + 10.0000vw, 8rem) 20rem auto 8em;
+  grid-template-rows: 5em clamp(5rem, 2.7500rem + 10.0000vw, 8rem) clamp(12.5rem, 5.3571rem + 22.8571vw, 22.5rem) auto 8em;
   height: 100vh;
   width: 100%;
 }
 
 /* Navigation bar */
+
 .navBar {
   align-items: end;
   animation: fadeIn ease 1s;
@@ -198,6 +199,7 @@ body {
   transform: none;
 }
 
+
 /* Main title area */
 header, .mainTitle {
   animation: fadeIn ease 1s;
@@ -231,13 +233,25 @@ header, .mainTitle {
 }
 .dividerLine {
   width: 280px;
-  border: white 2px solid;
+  border: #004D00 2px solid;
 }
 .logo {
   height: 60px;
   padding-bottom: 10px;
 }
 
+/* Slideshow */
+.slideshow {
+  grid-area: imageBox;
+  display: flex;
+  align-items: center;
+  overflow: hidden
+}
+.slideshow img {
+  min-width: 100%
+}
+
+/*
 .imageBox {
   grid-area: imageBox;
   display: flex;
@@ -250,6 +264,7 @@ header, .mainTitle {
   min-width: 100%;
   min-height: 100%
 }
+*/
 
 .textBox {
   align-items: center;
@@ -287,13 +302,13 @@ header, .mainTitle {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.textSection3 {
+.textSection4 {
   margin-bottom: 40px;
 }
 .textSection1 p, .textSection3 p {
   margin-left: 20px;
 }
-.textSection2 p {
+.textSection2 p, .textSection4 p {
   margin-right: 20px;
 }
 
@@ -302,13 +317,21 @@ header, .mainTitle {
 @media screen and (max-width: 800px) {
   .textSection {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
   }
   .textSection1 p, .textSection3 p {
     margin-right: 20px;
+    text-align: justify;
   }
   .textSection2 p {
     margin-left: 20px;
+    text-align: justify;
+  }
+  .textBox {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .textBox p {
+    text-align: justify;
   }
 }
 

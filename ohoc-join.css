@@ -3,3 +3,13 @@
   padding: 30px;
   margin: 30px;
 }
+.imageBox {
+  grid-area: imageBox;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-width: 100%;
+}
+a {
+  color: black;
+}
