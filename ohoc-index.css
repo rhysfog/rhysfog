@@ -255,6 +255,7 @@ img[src*='31RelaySimon.JPG'], img[src*='RegistrationDesk.jpg'], img[src*='Awards
 }
 img[src*='OH Relay winners.jpg'] {
   padding-top: 2rem;
+}
 
 .textBox {
   align-items: center;
