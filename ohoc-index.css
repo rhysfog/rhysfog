@@ -250,21 +250,11 @@ header, .mainTitle {
 .slideshow img {
   min-width: 100%
 }
-
-/*
-.imageBox {
-  grid-area: imageBox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden
+img[src*='31RelaySimon.JPG'], img[src*='RegistrationDesk.jpg'], img[src*='Awards1.JPG'] {
+  padding-top: 5rem;
 }
-.imageBox img {
-  flex-shrink: 0;
-  min-width: 100%;
-  min-height: 100%
-}
-*/
+img[src*='OH Relay winners.jpg'] {
+  padding-top: 2rem;
 
 .textBox {
   align-items: center;
